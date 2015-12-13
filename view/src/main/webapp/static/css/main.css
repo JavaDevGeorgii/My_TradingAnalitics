@@ -1,0 +1,210 @@
+html,
+body {
+    height: 100%;
+    background-image:
+    url('http://cdn3.crunchify.com/wp-content/uploads/2013/03/Crunchify.bg_.300.png');
+}
+
+#content {
+    min-height: 100%;
+    height: auto;
+    margin: 50px auto -60px;
+    padding: 0 0 60px;
+}
+
+#footer {
+    background: #7e7e7e;
+    color: #dbdbdb;
+    font-size: 11px;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    margin-top: -60px;
+    position: relative;
+    overflow:hidden;
+}
+
+#content .container {
+    padding: 20px;
+}
+
+#currency-table {
+    font-size: 14px;
+    table-layout: fixed;
+    text-align: center;
+    width: 180px;
+    border-collapse: collapse;
+}
+
+#currency-table td {
+    border-bottom: 1px solid #ccc;
+    color: rgba(10, 38, 47, 0.85);
+    padding: 9px 8px;
+    transition: .3s linear;
+}
+#currency-table tr:hover td{
+    background: #efefef;
+}
+
+.parent {
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+
+/* checkbox */
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left:0; top: 2px;
+    width: 17px; height: 17px;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+}
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    content: '✔';
+    position: absolute;
+    top: 0; left: 4px;
+    font-size: 14px;
+    color: #09ad7e;
+    transition: all .2s;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+label:hover:before {
+    border: 1px solid #4778d9!important;
+}
+
+.text-indicator {
+    font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+    color: #777;
+}
+
+.text-details {
+    font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+    color: #777;
+    margin-top: 20px;
+}
+
+#chart_panel {
+    width:220px;
+}
+div#left_block {
+    float:left;
+    width:100px;
+}
+div#right_block {
+    float:right;
+    width:100px;
+}
+
+.highcharts-container{
+    margin:80px 0px;
+}
+
+
+/* Код увеличителя начинается здесь */
+/* Если ваше изображение не связано ссылкой с другой страницей, оставьте ссылку в виде <a href="#nogo">
+Иначе увеличительне будет работать в IE6 */
+
+.ienlarger {
+    float: left;
+    clear: none; /* Можно установить left или right по необходимости */
+    padding-bottom: 5px; /* Расстояние между миниатюрами. Лучше не трогать данное поле */
+    padding-right: 5px; /* Расстояние между миниатюрами и окружающим текстом */
+}
+
+.ienlarger a {
+    display:block;
+    text-decoration: none;
+    /* Если добавить правило cursor:default;, то отключится курсор в виде руки */
+}
+
+.ienlarger a:hover{ /* Не надо изменять тип позиционирования */
+    position:relative;
+}
+
+.ienlarger span img {
+    border: 1px solid #FFFFFF; /* Добавляем рамку вокруг изображения */
+    margin-bottom: 8px; /* /Сдвигаем текст вниз от изображения */
+}
+
+.ienlarger a span {  /* Для большого изображения и названия */
+    position: absolute;
+    display:none;
+    color: #FFCC00; /* Текст названия */
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px; /* Размер шрифта названия */
+    background-color: #000000;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 13px;
+    padding-left: 10px;
+}
+
+.ienlarger img { /* Для IE, чтобы не было рамки вокруг ссылки */
+    border-width: 0;
+}
+
+.ienlarger a:hover span {
+    display:block;
+    top: 50px; /* Большое изображение выскакивает вверх на 50px от миниатюры */
+    left: 90px; /* Большое изображение выскакивает влево на 90px от миниатюры */
+    z-index: 100;
+
+    /* Если добавить правило cursor:default;, то отключится курсор в виде руки на большом изображении */
+}
+
+.resize_thumb {
+    width: 150px; /* Вводим нужный размер миниатюры здесь */
+    height : auto;
+}
+
+.vcenter {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+
+
+
+
+

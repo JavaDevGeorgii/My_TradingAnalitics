@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="main.page" template="/WEB-INF/layout/main/main-layout.jsp">
+        <put-attribute name="main.title" value="Main Page" />
+        <put-attribute name="main.header" value="/WEB-INF/layout/main/header.jsp" />
+        <put-attribute name="main.content" value="/WEB-INF/layout/main/content.jsp" />
+        <put-attribute name="main.footer" value="/WEB-INF/layout/main/footer.jsp" />
+    </definition>
+
+    <!--<definition name="chart.page" template="/WEB-INF/layout/main/charts.jsp">-->
+    <!--</definition>-->
+
+    <definition name="deal.page" extends="main.page">
+        <put-attribute name="main.content" value="/WEB-INF/layout/main/deal.jsp"/>
+    </definition>
+
+</tiles-definitions>
